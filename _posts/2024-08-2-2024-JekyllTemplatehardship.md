@@ -11,6 +11,4 @@ image:
   path: '/assets/img/headers/hello.jpg'
 ---
 
-Hello World!
-
-Welcome to my site!
+Here is how I struggled through installing this theme
