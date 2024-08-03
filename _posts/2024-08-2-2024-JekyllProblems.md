@@ -8,7 +8,7 @@ toc: true
 comments: active
 ping: true
 image:
-  path: '/assets/img/headers/hello.jpg'
+  path: '/assets/img/headers/jekyll.webp'
 ---
 
 Here is how I struggled through installing this theme
