@@ -27,10 +27,6 @@
   icon: 'fab fa-imdb'   # icons powered by <https://fontawesome.com/>
   url:  'https://www.imdb.com/name/nm3760079/'                  # Fill with your Linkedin homepage
 
-- type: imdb
-  icon: 'fa-brands fa-imdb'   # icons powered by <https://fontawesome.com/>
-  url:  'https://www.imdb.com/name/nm3760079/'                  # Fill with your Linkedin homepage
-
 #
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'
