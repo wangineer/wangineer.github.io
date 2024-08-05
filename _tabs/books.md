@@ -4,7 +4,7 @@ icon: fas fa-stream
 title      : "Book Recommendations"
 fid        : 50 
 date       : "2023-02-26"
-categories : ['Book']
+categories : ['Linux']
 order: 6
 ---
 {% for post in site.posts %}
