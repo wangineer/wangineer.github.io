@@ -16,3 +16,5 @@ Here is how I struggled through installing this theme
 ## There was a Dream
 ### It was a simple Dream
 ## Back to reality
+
+test
