@@ -5,7 +5,7 @@ order: 4
 ---
 Hello, and welcome to my website! My name is Kevin, and I'm thrilled to share a bit about myself with you.
 
-I have been immersed in the tech industry for over 14 years, and it has been an exciting journey filled with growth and learning. As a network engineer, I have had the privilege of working in diverse sectors, including the food industry, live television industry, school district industry, and currently, a Fortune 500 company. Each experience has shaped my skills and broadened my perspective, allowing me to tackle various challenges with confidence and expertise.
+I have been immersed in the tech industry for over 14 years, and it has been an exciting journey filled with growth and learning. As a network engineer, I have had the privilege of working in diverse sectors, including the food manufacturing, live television production, Education, and currently, a data infrastructure company. Each experience has shaped my skills and broadened my perspective, allowing me to tackle various challenges with confidence and expertise.
 
 Beyond my professional life, I find solace and joy in simple pleasures. On beautiful days, you'll often find me firing up the grill and preparing delicious barbecued meals for my family. There's something magical about bringing loved ones together around a table filled with mouthwatering food.
 
