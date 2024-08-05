@@ -9,7 +9,7 @@ comments: active
 ping: true
 image:
   path: '/assets/img/headers/hello.webp'
-  pin: true
+pin: true
 ---
 
 ## Hello World!
