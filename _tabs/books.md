@@ -1,9 +1,10 @@
 ---
 layout: post
 icon: fas fa-stream
-title      : "Book Recommendations"
+title      : "Book"
 fid        : 50 
 date       : "2023-02-26"
+author     : Kevin
 categories : ['Linux']
 order: 6
 ---
