@@ -1,7 +1,7 @@
 ---
 layout: post
 icon: fas fa-stream
-title      : "Book"
+title      : "Books"
 fid        : 50 
 date       : "2023-02-26"
 author     : Kevin
@@ -12,7 +12,7 @@ order: 6
   {% if post.categories contains 'Linux' %}
     
 #### [{{post.title}}]({{post.url}})<br/><small>{{ post.date | date_to_long_string }}</small>
-By: {{post.author}}
+By: [{{post.author}}]
     
   {% endif %}
 {% endfor %}
