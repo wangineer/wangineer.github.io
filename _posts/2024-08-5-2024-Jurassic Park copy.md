@@ -1,7 +1,7 @@
 ---
-title: Jurassic Park
-description: This is my first post.  Look at me Mom!
-date: 2024-08-03 12:00:00:01 +/-0000
+title: Jurassic World
+description: The World is going down
+date: 2024-08-04 18:00:00:01 +/-0000
 categories: [Movie, Linux]
 tags: [Dinasour,wastedpost]     # TAG names should always be lowercase
 toc: true
