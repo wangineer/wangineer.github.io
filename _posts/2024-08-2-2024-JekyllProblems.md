@@ -9,7 +9,7 @@ comments: active
 ping: true
 image:
   path: '/assets/img/headers/jekyll.webp'
-published: false
+published: true
 ---
 
 Here is how I struggled through installing this theme
