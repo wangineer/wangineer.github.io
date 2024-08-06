@@ -14,3 +14,17 @@ In addition to my passion for cooking, I am an avid tinkerer with tech gadgets. 
 This website serves as a platform for me to share my knowledge, experiences, and insights with you. I hope you find the content valuable and enjoyable. Feel free to reach out to me with any questions, suggestions, or collaborations. I'm always eager to connect with like-minded individuals who share a passion for technology and its limitless possibilities.
 
 Thank you for visiting, and I look forward to embarking on this digital journey together!
+
+## Certifications
+CCNA - Issued - 2015 
+     - Expires - 2027
+
+### Expired:
+Aviatrix Certified Engineer:
+- ACE Associate - 2021 - 2024
+- Multi-Cloud Network Operations 2021 - 2024
+
+Manufacturing
+- Pasteurization License
+- HACCP Meat and Poultry
+- Fork Lift License
