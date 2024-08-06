@@ -18,7 +18,7 @@ pin: false
 Prior to having my homelab server, I used my headless PC to host all my virtual machines. Things were running fine for years, until one day my PC decided to complete a routing update.  Except during this update, I found all my VM's stuck in a "saved" state.  I tried to "Start" the VM's, restart services, and even reboot my pc.  Nothing seemed to work.  
 
 ## Troubleshooting Efforts
-![Saved State Error](/assets/img/savedstateerror.webp)
+![Saved State Error](/assets/img/savedstateerror.webp){: .shadow }
 Desktop View
 
 Every time I tried to start a VM, I recieved the error "The application encourntered an error while attempting to change the state of Windows 10 Tech Preview"
