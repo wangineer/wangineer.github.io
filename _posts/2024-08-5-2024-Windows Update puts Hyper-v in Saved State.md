@@ -27,7 +27,12 @@ Disregard the mention of "Tech Preview" as that may have been the name of the VM
 
 ## The Band-aid
 After Googling, I found that if ran the below powershell script and rebooted my physical computer, I could then Start all my VM's. 
-```Powershell
+
+```text
+bcdedit /set hypervisorlaunchtype auto
+```
+
+```powershell
 bcdedit /set hypervisorlaunchtype auto
 ```
 
