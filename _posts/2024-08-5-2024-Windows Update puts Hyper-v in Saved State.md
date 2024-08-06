@@ -19,6 +19,7 @@ Prior to having my homelab server, I used my headless PC to host all my virtual 
 
 ## Troubleshooting Efforts
 ![Desktop View](/assets/img/savedstateerror.webp)
+(/assets/img/savedstateerror.webp)
 
 Every time I tried to start a VM, I recieved the error "The application encourntered an error while attempting to change the state of Windows 10 Tech Preview"
  - Windows 10 Tech Preview failed to restore virtual machine state.
@@ -27,10 +28,6 @@ Disregard the mention of "Tech Preview" as that may have been the name of the VM
 
 ## The Band-aid
 After Googling, I found that if ran the below powershell script and rebooted my physical computer, I could then Start all my VM's. 
-
-```text
-bcdedit /set hypervisorlaunchtype auto
-```
 
 ```powershell
 bcdedit /set hypervisorlaunchtype auto
