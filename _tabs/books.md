@@ -1,5 +1,5 @@
 ---
-layout: default-books
+layout: home
 icon: fas fa-book
 title      : "Books"
 fid        : 50 
