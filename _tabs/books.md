@@ -7,9 +7,5 @@ date       : "2023-02-26"
 author     : Kevin
 order: 6
 ---
-{% for post in site.posts %}
-  {% if post.categories contains 'Linux' %} 
 
-  {% endif %}
-{% endfor %}
 
