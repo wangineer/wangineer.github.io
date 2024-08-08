@@ -7,8 +7,8 @@ tags: [powershell,vms,homelab]     # TAG names should always be lowercase
 toc: true
 comments: active
 ping: true
-image:
-  path: '/assets/img/headers/WindowsUpdatesavedstate.webp'
+#image:
+#  path: '/assets/img/headers/WindowsUpdatesavedstate.webp'
 pin: false
 # published: false
 ---
