@@ -10,7 +10,7 @@ ping: true
 image:
   path: '/assets/img/headers/WindowsUpdatesavedstate.webp'
 pin: false
-# published: false
+published: true
 ---
 
 ## The Problem - VM's go into Saved State after Windows Update
