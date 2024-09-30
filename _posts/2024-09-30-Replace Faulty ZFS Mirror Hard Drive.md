@@ -104,7 +104,8 @@ zpool replace zfs500mirror /dev/disk/by-id/ata-ST3500312CS_9VV0PEMS-part1 /dev/s
 
 
 Once i completed i did zpool status and saw it was replacing and resilvering
-```root@pve1:~# zpool status
+```
+root@pve1:~# zpool status
   pool: zfs500mirror
  state: DEGRADED
 status: One or more devices is currently being resilvered.  The pool will
