@@ -55,4 +55,3 @@ errors: No known data errors
 
 
 I watched this video
-{% include embed/{youtube}.html id='{IQA7aTezrVE}' %}
