@@ -2,13 +2,13 @@
 title: Beginning the study of CWNA-109
 description: Modulating a successful pass!
 date: 2024-08-15 12:00:00:01 +/-0000
-categories: [CWNA-109, Beginning]
-tags: [wireless,study,certification]     # TAG names should always be lowercase
+categories: [Certification, CWNA-109]
+tags: [wireless,study,certification,CWNP]     # TAG names should always be lowercase
 toc: true
 comments: active
 ping: true
 image:
-  path: '/assets/img/headers/hello.webp'
+  path: '/assets/img/headers/CWNP-Logo.webp'
 pin: false
 # published: false
 ---
