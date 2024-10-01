@@ -1,6 +1,6 @@
 ---
 title: How to Replace Mirror'd Hard Drive in ZFS Proxmox
-description: Modulating a successful pass!
+description: Mirror Mirror on the Wall!
 date: 2024-09-30 12:00:00:01 +/-0000
 categories: [Proxmox, Troubleshoot]
 tags: [server,raid,mirror,zfs,zpool]     # TAG names should always be lowercase
