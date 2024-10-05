@@ -12,25 +12,39 @@ image:
 pin: false
 # published: false
 ---
-Stats:
+## Stats:
  - ZFS Mirror using two 500gb hard drives
  - Proxmox Version 7.4-16
 
-Scenario: I recieved multiple emails over many months stating my Proxmox Mirror was Degraded and couldn't correct errors.  
+## Scenario:
+If I remember correctly, my server had lost power for some reason. The next morning I started receiving emails stating proxmox found and couldn't recover some errors. This ended up putting the "mirror" in a degraded state.  The errors were only in the single digits and not incrementing, so I wasn't terribly worried, but I went ahead and purchased a replcement drive.
 
 
-Pre-steps:  Place the pre steps to clear the counters. 
+## Pre-steps:
+When you first experience this issue, you can always issue the below commands. And wait for the next scan to complete and see if more errors are found.
+```
+zpool status
+zpool clear
+zpool status
+```
+
+If you don't do the "zpool clear", you still get daily emails stating proxmox found uncorrectable errors.  I let this go one for many months. Oddly enough there was another power outage, and Proxmox stopped finding uncorrectable errors.  
+
+Depending on how willing you are to wait for the errors to get bad or have a drive failure, you should probably start the below steps. 
+
+1. Power off the server and pull out the faulty hard drive
+  * When I first installed the hard drives in my server, I always made a note on my excel sheet what Hard drive/Serial Number/Brand/Size I installed
+2. Ordered the Correct hard drive
+3. Put the hard drive back in and powered the server back on.  
+  * The drive is still part of the mirror and providing some tolerance of loss data. In the event the other drive happened to have a catastrophic failure, you wouldn't be totally out the data.
+  * This is a good time to tell you that using a "mirror" as a form of data backup is not a good design.  I recommend having a seperate physical device/location to consider it a true backup.  Many things can occur to a mirror that can render your data unreadable. This could be something physical or, as simple as issuing the wrong command. 
 
 
-I powered off my server and pulled out the faulty hard drive.
-Note: One thing I do when I install my drives, is that I took down the serial number, and put it into an excel sheet noting what slot I placed it in. 
+## The Actual Repalcement
 
+After many months of ignoring the emails, our house had another power outage. (One would really think that I should get a backup battery) After the device came onine, I saw a significant jump in error. 
 
-I ordered the correct Hard drive off of amazon. 
-
-
-Below command "zpool status"  shows the status of the pool and we see that hard drive with serial number 9VV0PEMS is in a Faulty State
-  You can clear counters.  I think its in the video on how to do it to see if its acutally an issue
+Below command "zpool status"  shows that the hard drive with serial number 9VV0PEMS is in a Faulty State.
 
 ```
 root@pve1:~# zpool status
@@ -55,19 +69,27 @@ errors: No known data errors
 
 
 
+### Identify the Drive via CLI
+I feel like I researched a lot on how to replace the drives on a proxmox mirror.  Having never done this before, I wanted to be as prepared as I could. I ended up finding a youtube video and gathering a collection of forums to develop a plan.  
 
-To Replace the hard drive it think i did it the wrong way, but I have the output on how to fix it if you don't do it correct. 
+### Identify the faulty Drive via CLI
 
-First you need to find the faulty Drive
 It may be a good idea to get the below output
-
 ```
 ls -ahlp /dev/disk/by-id/ 
 ```
 
+## Power off/Pull Out/Push In/Power On
+This next step we need to remove the drive so the server unmounts the drive.  I'm there there may be better ways of doin this, but this seemed to emulate a drive failure and provided the outputs needed to proceed forward. 
 
+1. Power off the device (This can be done from the Proxmox GUI)
+2. Once powered off, pull out the faulty hard drive.
+3. With the faulty hard drive removed, put the new drive in.
+4. Once the new drive is in the same slot, you can power on the server. 
 
-I powered off the server and pulled the hard drive out.  then powered it back on. 
+Doing the above steps force the drive to be seen as Faulted and not mount on bootup.  You can see in the "zpool status" below that the faulty drive is in a degraded state and provides you the location id. "was dev/disk/by-id/" output.  At this point you don't see the new drive because it is not in the mirror yet.   
+
+<b>You need to copy and save this from the "zpool status" it also provides you the "UUID"</b> 
 
 ```
 root@pve1:~# zpool status
@@ -90,20 +112,45 @@ config:
 errors: No known data errors
 ```
 
+### Identify the new Hard drive
+To identify the new drive, we need to issue the command below by including the serial number. 
 
-You will need the "was" section
+"ls -ahlp /dev/disk/by-id/grep #########"  <--- #### equals the Serial number of new drive
+
+NOTE: "grep" is similar to using the "include" command in Cisco CLI. 
+
+```
+root@pve1:~# ls -ahlp /dev/disk/by-id/ |grep 9VVPP2ZH
+lrwxrwxrwx 1 root root    9 Sep 30 15:11 ata-ST3500312CS_9VVPP2ZH -> ../../sdb
+lrwxrwxrwx 1 root root   10 Sep 30 15:11 ata-ST3500312CS_9VVPP2ZH-part1 -> ../../sdb1
+lrwxrwxrwx 1 root root   10 Sep 30 15:11 ata-ST3500312CS_9VVPP2ZH-part9 -> ../../sdb9
+```
+
+You can see that the Serialn umber ID is listed with the "ata-ST3500312CS_9VVPP2ZH" and the UUID "sdb" is at the end.
 
 
-To get rid of the old reference and add the new hard drive I completed the below command, because i saw the drive refereced "sdb"
+### Difference in steps
+To swap drives in the mirror you will need to issue a "zpool replace" command. To do this, we need to reference the old location and the new location.  
 
+The video I watched referenced the UUID... (sdb). This isn't recommended, as I'm told if the server reboots, then that UUID could possibly chnage.  
+
+By watching the video, they stated to complete the below command after having identified location of hard drive. 
+
+OLD ID: ata-ST3500312CS_9VV0PEMS-part1
+NEW ID: ata-ST3500312CS_9VVPP2ZH
+NEW UUID:sdb
+
+
+Structure:
 zpool replace "Pool Name" /dev/disk/by-id/"name you copied above was" "New location of harddrive
 
+You can see below ouptut references the "UUID".  I later fix this later.
 ```
 zpool replace zfs500mirror /dev/disk/by-id/ata-ST3500312CS_9VV0PEMS-part1 /dev/sdb
 ```
 
-
-Once i completed i did zpool status and saw it was replacing and resilvering
+### Resilvering
+Once I completed I did zpool status and saw it was replacing and resilvering
 ```
 root@pve1:~# zpool status
   pool: zfs500mirror
@@ -128,8 +175,9 @@ errors: No known data errors
 ```
 
 
-You can see the above name doesn't match the "ata" name.  This can cause issues during a reboot i suspect.  you always want to use the id. 
+You can see the above name doesn't match the "ata" name.  It references the UUID instead.
 
+### Completed Resilver and Healthy Status
 You can now see below completed and all is good except the name
 ```
 root@pve1:~# zpool status
@@ -154,14 +202,17 @@ errors: No known data errors
 
 
 
-
+## How to fix Mirror Reference from UUID to ID
 If you want to replace this you need to complete a detach and then attach. 
 
+### Detach
+In the "detach" you referecne the Zpool mirror.  In my case zfs500mirror.  Then you reference the name you want removed from the mirror. 
 ```
 root@pve1:~# zpool detach zfs500mirror sdb
 ```
 
-You can now see the "sdb" removed from the mirror
+
+You can now see the "sdb" removed from the mirror, and there is a single drive in the mirror.
 ```
 root@pve1:~# zpool status
   pool: zfs500mirror
@@ -182,8 +233,8 @@ errors: No known data errors
 ```
 
 
-
-Now I needed to add it back using the attach command.  For this command, you need to add add the first drive that was healthy.  Then you list the second drive (new drive) you want to add into the mirror
+# Attach
+Now I needed to add it back using the attach command.  For this command, you need to add the first drive that was healthy.  Then you list the second drive (new drive) you want to add into the mirror
 
 zpool attach "Pool Name" /dev/disk/by-id/"Disk that was not changed" /dev/disk/by-id/"the new disk you added
 ```
@@ -215,7 +266,7 @@ errors: No known data errors
 
 
 
-
+## Complete
 After all the resilvering is done, its all done and healthy
 ```
 root@pve1:~# zpool status zfs500mirror
