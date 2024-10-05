@@ -15,6 +15,7 @@ pin: false
 ## Stats:
  - ZFS Mirror using two 500gb hard drives
  - Proxmox Version 7.4-16
+ - This is not a boot drive (Not sure if that matters)
 
 ## Scenario:
 If I remember correctly, my server had lost power for some reason. The next morning I started receiving emails stating proxmox found and couldn't recover some errors. This ended up putting the "mirror" in a degraded state.  The errors were only in the single digits and not incrementing, so I wasn't terribly worried, but I went ahead and purchased a replcement drive.
@@ -233,7 +234,7 @@ errors: No known data errors
 ```
 
 
-# Attach
+### Attach
 Now I needed to add it back using the attach command.  For this command, you need to add the first drive that was healthy.  Then you list the second drive (new drive) you want to add into the mirror
 
 zpool attach "Pool Name" /dev/disk/by-id/"Disk that was not changed" /dev/disk/by-id/"the new disk you added
@@ -292,9 +293,29 @@ errors: No known data errors
 
 
 
+# Conclusion 
+Now that I've completed a Mirror replacement, I may start looking at two more projects
+
+1. Moving my Boot Drive to the CD Tray
+  #If I get that to work, I may also look at figuring out how to mirror the boot drive with a slot in back of my Dell R710.
+2. My 8TB Mirror is almost full and I have two scenarios with the 8 Bay Server that i have. 
+  * Buy two new hard drives of greater space and create a new mirror
+  or
+  * Buy a single hard drive of bigger size and replce one of the 8tb hard drives with the steps listed above. Once that is complete, Buy another hard drive down the road and replace the last 8tb hard drive when I really need the extra space.  Once replaced, I think there is a command to increase the space of Mirror.  
+  * Buy a single hard drive, and create a new Mirror.  Copy all of the contents from the Old mirror to the new mirror, and wait until I have enough money to buy a new Hard drive of same space and add it to the new mirror. 
+
+Definitely some fun options ahead. But it may take me a year to get there. 
 
 
 
-
-I watched this video
+# Resources
+1. I watched this video
 https://www.youtube.com/watch?v=IQA7aTezrVE
+
+{% include embed/youtube.html id='IQA7aTezrVE' %}
+
+2. Helped me understand the ID and UUID section
+https://dannyda.com/2020/09/24/how-to-add-attach-new-disk-to-existing-zfs-pool-on-proxmox-ve-pve-how-to-remove-detach-disk-from-zfs-pool-on-proxmox-ve/#google_vignette
+
+3. Future resource on how to replace Boot Drive
+https://theorangeone.net/posts/proxmox-boot-drive-replacement/
