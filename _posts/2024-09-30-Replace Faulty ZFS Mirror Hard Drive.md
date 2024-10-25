@@ -310,12 +310,12 @@ Definitely some fun options ahead. But it may take me a year to get there.
 
 # Resources
 1. I watched this video
-https://www.youtube.com/watch?v=IQA7aTezrVE
+<https://www.youtube.com/watch?v=IQA7aTezrVE>
 
 {% include embed/youtube.html id='IQA7aTezrVE' %}
 
 2. Helped me understand the ID and UUID section
-https://dannyda.com/2020/09/24/how-to-add-attach-new-disk-to-existing-zfs-pool-on-proxmox-ve-pve-how-to-remove-detach-disk-from-zfs-pool-on-proxmox-ve/#google_vignette
+<https://dannyda.com/2020/09/24/how-to-add-attach-new-disk-to-existing-zfs-pool-on-proxmox-ve-pve-how-to-remove-detach-disk-from-zfs-pool-on-proxmox-ve/#google_vignette>
 
 3. Future resource on how to replace Boot Drive
-https://theorangeone.net/posts/proxmox-boot-drive-replacement/
+<https://theorangeone.net/posts/proxmox-boot-drive-replacement/>
