@@ -5,7 +5,7 @@ date: 2024-08-02 16:00:00:01 +/-0000
 categories: [Linux, website]
 tags: [jekyll,ruby,ubuntu,html-proofer]     # TAG names should always be lowercase
 toc: true
-comments: active
+# comments: active
 ping: true
 image:
   path: '/assets/img/headers/jekyll.webp'

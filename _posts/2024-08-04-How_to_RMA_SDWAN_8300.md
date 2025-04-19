@@ -5,7 +5,7 @@ date: 2024-08-04 20:00:00:01 +/-0000
 categories: [NetworkEngineer, RMA]
 tags: [SDWAN,RMA,c8300,cisco]     # TAG names should always be lowercase
 toc: true
-comments: active
+# comments: active
 ping: true
 image:
   path: '/assets/img/headers/8300.webp'

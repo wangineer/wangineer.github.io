@@ -5,7 +5,7 @@ date: 2024-08-02 12:00:00:01 +/-0000
 categories: [Random, Hello]
 tags: [hello,aboutme]     # TAG names should always be lowercase
 toc: true
-comments: active
+# comments: active
 ping: true
 image:
   path: '/assets/img/headers/hello.webp'

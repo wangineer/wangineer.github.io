@@ -5,7 +5,7 @@ date: 2024-08-05 12:00:00:01 +/-0000
 categories: [Virtualization, Hyper-V]
 tags: [powershell,vms,homelab]     # TAG names should always be lowercase
 toc: true
-comments: active
+# comments: active
 ping: true
 image:
   path: '/assets/img/headers/WindowsUpdatesavedstate.webp'

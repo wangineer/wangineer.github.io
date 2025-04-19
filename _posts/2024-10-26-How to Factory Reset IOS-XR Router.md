@@ -5,7 +5,7 @@ date: 2024-10-24 12:00:00:01 +/-0000
 categories: [NetworkEngineer, Decommission]
 tags: [iosxr,factory-reset,cisco,]     # TAG names should always be lowercase
 toc: true
-comments: active
+# comments: active
 ping: true
 image:
   path: '/assets/img/headers/cisco.webp'
