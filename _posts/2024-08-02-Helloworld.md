@@ -10,10 +10,10 @@ ping: true
 image:
   path: '/assets/img/headers/hello.webp'
 pin: true
-published: false
+#published: false
 ---
 
-## Hello World!
+## Hello World 2!
 
 Welcome to my new website! 
 
