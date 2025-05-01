@@ -6,13 +6,13 @@ categories: [Random, Hello]
 tags: [hello,aboutme]     # TAG names should always be lowercase
 toc: true
 # comments: active
-#image:
-#  path: '/assets/img/headers/hello.webp'
+image:
+  path: '/assets/img/headers/hello.webp'
 pin: true
 published: true
 ---
 
-## Hello World 2!
+## Hello World!
 
 Welcome to my new website! 
 
