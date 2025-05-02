@@ -12,7 +12,7 @@ pin: true
 published: true
 ---
 
-## Hello World 2!
+## Hello World!
 
 Welcome to my new website! 
 
