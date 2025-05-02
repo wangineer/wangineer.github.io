@@ -35,8 +35,7 @@ apt-get install git   (version will not be the same as what is shared on website
 
 ### Windows
 
-<git-scm.com>
-: When you go to the website there will be a place to click download.  
+Go to <git-scm.com> and click to download.  The site will know you are running windows.
 
 > Once installed you can open the program `git bash`  This will allow you to use all of the linus commands used within linux.
 {: .prompt-tip }
