@@ -20,16 +20,13 @@ As network engineers, we know our industry is constantly evolving, and staying a
 {: .prompt-info }
 
 Download Site
-: <git-scm.com>
+ - [**gitdownload**][Git Download Site]
 
 
 ### Linux
 ```shell
 apt-get install git   (version will not be the same as what is shared on website likely)
 ```
-
-> If you are using `Almalinux`, you will need to install `wget` as well. 
-{: .prompt-info }
 
 
 ### Windows
@@ -189,3 +186,6 @@ If you want to list the git config command and get a few more deatis.
 ```
 git config --list
 ```
+
+
+[gitdownload]: https://git-scm.com
