@@ -15,15 +15,16 @@ published: true
 As network engineers, we know our industry is constantly evolving, and staying ahead means embracing tools that can enhance our workflows. While Git isn’t a requirement in my current role, its potential to streamline version control, collaboration, and problem-solving has piqued my interest. This blog series is my way of diving into the world of Git from a beginner's perspective—documenting my journey, sharing insights, and creating a resource to reference when things (inevitably) go wrong. Whether you’re curious about Git or considering adding it to your skillset, I invite you to join me on this learning adventure.
 
 
+
 ## How to Git Git (Install/Download)
+
+Download Git [**here**][gitdownload]
+
+---
+
+
 > Macbooks have `git` installed automatically
 {: .prompt-info }
-
-Download Site
-[**Git Download Site**][gitdownload]
-
-[Wiki][wiki]
-[wiki]: https://github.com/cotes2020/jekyll-theme-chirpy/wiki
 
 
 ### Linux
