@@ -2,8 +2,8 @@
 title: Gittin on Git
 description: Discover how a Network Engineer embarks on a beginner-friendly journey to learn Git—exploring its potential to adapt to a changing tech landscape, document key lessons, and troubleshoot effectively in this first post of an insightful series.
 date: 2025-05-01 12:00:00:01 +/-0000
-categories: [Git, CI/CD]
-tags: [git,init]     # TAG names should always be lowercase
+categories: [series, git]
+tags: [gitinit,github]     # TAG names should always be lowercase
 toc: true
 comments: active
 image:
@@ -19,9 +19,8 @@ As network engineers, we know our industry is constantly evolving, and staying a
 > Macbooks have `git` installed automatically
 {: .prompt-info }
 
-Download Site:
+Download Site
 : <git-scm.com>
-: <git-scm.com/download/linux>
 
 
 ### Linux
@@ -37,7 +36,7 @@ apt-get install git   (version will not be the same as what is shared on website
 
 Go to <git-scm.com> and click to download.  The site will know you are running windows.
 
-> Once installed you can open the program `git bash`  This will allow you to use all of the linus commands used within linux.
+> Once installed you can open the program `git bash`  This will allow you to use all of the linux commands usedto work with Git.
 {: .prompt-tip }
 
 
@@ -49,28 +48,6 @@ test@servername:~/git/github$ git --version
 git version 2.34.1
 ```
 
-
-## .gitconfig
-This is where your system wide Git configurations are stored.  One of the first things that needs to be done after installing `git` is to apply your name and email.  If you are going to commit anything this needs to be set. 
-
-### Example file
-``` 
-test@servername:~$ cat .gitconfig
-[user]
-        name = TESTNAME
-        email = testname@email.com
-test@servername:~$ git config --global --list
-user.name=TESTNAME
-user.email=testname@email.com
-```
-
-### How to set a Global Username and email
-```bash
-git config --global user.name 'Test Name'
-git config --global user.email@mail.com
-```
-
-### How to verify configuration is set correctly?????
 
 ## Now what you've Gotten Git, you can finally Git Started (Video 3)
 
@@ -96,7 +73,24 @@ test@servername:~$ ls -la | grep git
 drwxrwxr-x  8 test test 4096 Oct 25 23:46 .git
 ```
 
-If you hop out of that directory, there is no .git folder
+## Understanding Git files
+
+### .gitconfig
+This is where your system wide Git configurations are stored.  One of the first things that needs to be done after installing `git` is to apply your name and email.  If you are going to commit anything this needs to be set. 
+
+#### Example file
+``` 
+test@servername:~$ cat .gitconfig
+[user]
+        name = TESTNAME
+        email = testname@email.com
+test@servername:~$ git config --global --list
+user.name=TESTNAME
+user.email=testname@email.com
+```
+
+
+### Other files and folders
 
 Here is a list of the files/folders and a description
 - config - basic config how to use - you can use 
@@ -108,7 +102,16 @@ Here is a list of the files/folders and a description
 - refs - check out instances in time
 
 
-How to Remove Git being managed from a folder (delete the .git directory)
+## Your first commands to start Git'ting
+You will need to set a user name and email.  
+```bash
+git config --global user.name 'Test Name'
+git config --global user.email@mail.com
+```
+
+
+
+## How to Remove Git being managed from a folder (delete the .git directory)
  - Not sure how but i have .git in upper folder and current folder
  ----------------------REVIEW--------------------------------------------------------
 ```
@@ -116,7 +119,7 @@ rm -rm .git
 ```
 
 
-### How to Clone repo from Github
+## How to Clone repo from Github
 Go to the website and click the "Clone or Download" He did this in his regular desktop folder  it created a folder called "fetch" and it becomes a repo automcatically with the folder added.  YOU DO NOT NEED TO Configure "git init"
 ```
 $git clone https://github.com/github/fetch.git
@@ -134,7 +137,7 @@ You will also see new files generated from this compared to just having locally
 
 
 
-#Wrap Up -------------------------------------------------------
+## What have we learned
 ## How to Git up and Running quick
 1. Install Git
 
