@@ -18,13 +18,7 @@ As network engineers, we know our industry is constantly evolving, and staying a
 
 ## How to Git Git (Install/Download)
 
-Download Git [**here**][gitdownload] (https://git-scm.com)
-
-<html>
-<body>
-<hr>
-</body>
-</html>
+Download Git [**here**][gitdownload{target=_blank}] (https://git-scm.com)
 
 
 > Macbooks have `git` installed automatically
