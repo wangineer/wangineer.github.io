@@ -17,37 +17,44 @@ As network engineers, we know our industry is constantly evolving, and staying a
 
 ## How to Git Git (Install/Download)
 
-First you must Download Git 
+### First you must Download Git 
 : <git-scm.com>
 : <git-scm.com/download/linux>
 
-> MACbooks have it install already.
+> Macbooks have `git` installed automatically
 {: .prompt-info }
 
 ### Linux
 ```shell
-Linux: sudo apt-get install git   (version will not be the same likely)
-                 wget
+apt-get install git   (version will not be the same as what is shared on website likely)
 ```
+
+> If you are using `Almalinux`, you will need to install `wget` as well. 
+
 
 ### Windows
 
-Windows: git-scm.com click on the download
-   Open program "git bash" and that gives you all the linux commands
+<git-scm.com>
+: When you go to the website there will be a place to click download.  
+
+> Once installed you can open the program `git bash`  This will allow you to use all of the linus commands used within linux.
+{: .prompt-tip }
 
 
-## Verify Version: 
-```
+### Verify Git Version: 
+Once installed you will want to verify the version you are running
+
+```bash
 test@servername:~/git/github$ git --version
 git version 2.34.1
 ```
 
-## .gitconfig
-This is where you system wide configurations store your "name" and "email" that is used for config change.
-etc/gitconfig  (I couldn't find anything at this location)
-/home/test   (this is location 'test' is the username logged in)
 
-```
+## .gitconfig
+This is where your system wide Git configurations are stored.  One of the first things that needs to be done after installing `git` is to apply your name and email.  If you are going to commit anything this needs to be set. 
+
+### Example file
+``` 
 test@servername:~$ cat .gitconfig
 [user]
         name = TESTNAME
@@ -57,29 +64,33 @@ user.name=TESTNAME
 user.email=testname@email.com
 ```
 
-How to set a Global Username and email
-```
+### How to set a Global Username and email
+```bash
 git config --global user.name 'Test Name'
 git config --global user.email@mail.com
 ```
 
-How to verify confiuration is set correctly
+### How to verify configuration is set correctly?????
 
 ## Now what you've Gotten Git, you can finally Git Started (Video 3)
 
 ### How to Create a Local Git Repository
 
-Create a Folder and then Init
-```
+#### Create a Folder and then Init
+```shell
 mkdir localrepo
 cd localrepo
 git init
 ```
+
 Below will be outputted
+```shell
 Initialized emtpy Git respository in /Users/test/Desktop/localrepo/.git/
 localrepo git:(master)    <-- You see (master) if you are on windows bash
+```
 
-If you do "ls -la" you will see a ".git" folder.  This is where all your saves are located
+>If you do `ls -la` you will see a `.git` folder.  This is where all your saves are located
+{: .prompt-tip }
 ```
 test@servername:~$ ls -la | grep git
 drwxrwxr-x  8 test test 4096 Oct 25 23:46 .git
@@ -87,6 +98,7 @@ drwxrwxr-x  8 test test 4096 Oct 25 23:46 .git
 
 If you hop out of that directory, there is no .git folder
 
+Here is a list of the files/folders and a description
 - config - basic config how to use - you can use 
 - decription - description of repo
 - Head - Current snapshot  you are on 
@@ -96,7 +108,7 @@ If you hop out of that directory, there is no .git folder
 - refs - check out instances in time
 
 
-How to Remove Git being managed froma folder (delete the .git directory)
+How to Remove Git being managed from a folder (delete the .git directory)
  - Not sure how but i have .git in upper folder and current folder
  ----------------------REVIEW--------------------------------------------------------
 ```
