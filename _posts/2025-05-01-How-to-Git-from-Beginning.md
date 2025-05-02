@@ -24,7 +24,7 @@ Download Git [**here**][gitdownload] (https://git-scm.com)
 <body>
 <hr>
 </body>
-</head>
+</html>
 
 
 > Macbooks have `git` installed automatically
