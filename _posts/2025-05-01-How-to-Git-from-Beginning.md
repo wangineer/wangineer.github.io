@@ -17,7 +17,7 @@ As network engineers, we know our industry is constantly evolving, and staying a
 
 ## How to Git Git (Install/Download)
 
-### First you must Download Git 
+Download Site
 : <git-scm.com>
 : <git-scm.com/download/linux>
 
@@ -30,6 +30,7 @@ apt-get install git   (version will not be the same as what is shared on website
 ```
 
 > If you are using `Almalinux`, you will need to install `wget` as well. 
+{: .prompt-info }
 
 
 ### Windows
