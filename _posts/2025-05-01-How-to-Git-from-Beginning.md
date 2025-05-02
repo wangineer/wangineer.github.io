@@ -20,7 +20,7 @@ As network engineers, we know our industry is constantly evolving, and staying a
 {: .prompt-info }
 
 Download Site
-[**gitdownload**][Git Download Site]
+[gitdownload][Git Download Site]
 
 
 ### Linux
