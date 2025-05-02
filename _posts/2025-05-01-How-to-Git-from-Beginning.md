@@ -22,6 +22,9 @@ As network engineers, we know our industry is constantly evolving, and staying a
 Download Site
 [gitdownload][Git Download Site]
 
+[Wiki][wiki]
+[wiki]: https://github.com/cotes2020/jekyll-theme-chirpy/wiki
+
 
 ### Linux
 ```shell
