@@ -16,13 +16,13 @@ As network engineers, we know our industry is constantly evolving, and staying a
 
 
 ## How to Git Git (Install/Download)
+> Macbooks have `git` installed automatically
+{: .prompt-info }
 
-Download Site
+Download Site:
 : <git-scm.com>
 : <git-scm.com/download/linux>
 
-> Macbooks have `git` installed automatically
-{: .prompt-info }
 
 ### Linux
 ```shell
