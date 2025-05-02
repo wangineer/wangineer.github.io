@@ -20,7 +20,7 @@ As network engineers, we know our industry is constantly evolving, and staying a
 {: .prompt-info }
 
 Download Site
-[gitdownload][Git Download Site]
+[**Git Download Site**][gitdownload]
 
 [Wiki][wiki]
 [wiki]: https://github.com/cotes2020/jekyll-theme-chirpy/wiki
