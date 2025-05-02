@@ -1,6 +1,6 @@
 ---
 title: Gittin on Git
-description: Git on with it
+description: Discover how a Network Engineer embarks on a beginner-friendly journey to learn Git—exploring its potential to adapt to a changing tech landscape, document key lessons, and troubleshoot effectively in this first post of an insightful series.
 date: 2025-05-01 12:00:00:01 +/-0000
 categories: [Git, CI/CD]
 tags: [git,init]     # TAG names should always be lowercase
@@ -12,20 +12,31 @@ pin: false
 published: true
 ---
 ## Scenario
-I'm a Network Engineer that wants to learn git.  Below are some notes I can go to so i don't forget.  Hopefully this will help other people trying to get into it.    
+As network engineers, we know our industry is constantly evolving, and staying ahead means embracing tools that can enhance our workflows. While Git isn’t a requirement in my current role, its potential to streamline version control, collaboration, and problem-solving has piqued my interest. This blog series is my way of diving into the world of Git from a beginner's perspective—documenting my journey, sharing insights, and creating a resource to reference when things (inevitably) go wrong. Whether you’re curious about Git or considering adding it to your skillset, I invite you to join me on this learning adventure.
+
 
 ## How to Git Git (Install/Download)
 
-Website for Git (git-scm.com  & git-scm.com/download/linux)
+First you must Download Git 
+: <git-scm.com>
+: <git-scm.com/download/linux>
 
-Mac: has it installed already
+> MACbooks have it install already.
+{: .prompt-info }
+
+### Linux
+```shell
 Linux: sudo apt-get install git   (version will not be the same likely)
                  wget
+```
+
+### Windows
+
 Windows: git-scm.com click on the download
    Open program "git bash" and that gives you all the linux commands
 
 
-Verify Version: 
+## Verify Version: 
 ```
 test@servername:~/git/github$ git --version
 git version 2.34.1
