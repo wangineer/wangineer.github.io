@@ -20,7 +20,7 @@ As network engineers, we know our industry is constantly evolving, and staying a
 
 Download Git [**here**][gitdownload]
 
----
+<hr>
 
 
 > Macbooks have `git` installed automatically
@@ -35,7 +35,7 @@ apt-get install git   (version will not be the same as what is shared on website
 
 ### Windows
 
-Go to <git-scm.com> and click to download.  The site will know you are running windows.
+Go to [**https://git-scm.com**][gitdownload] and click to download.  The site will know you are running windows.
 
 > Once installed you can open the program `git bash`  This will allow you to use all of the linux commands usedto work with Git.
 {: .prompt-tip }
