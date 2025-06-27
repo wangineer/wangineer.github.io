@@ -6,11 +6,10 @@ categories: [Proxmox, Troubleshoot]
 tags: [server,raid,mirror,zfs,zpool]     # TAG names should always be lowercase
 toc: true
 # comments: active
-ping: true
 image:
   path: '/assets/img/headers/proxmox.webp'
 pin: false
-# published: false
+published: True
 ---
 ## Stats:
  - ZFS Mirror using two 500gb hard drives
