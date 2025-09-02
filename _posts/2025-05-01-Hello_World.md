@@ -1,9 +1,9 @@
 ---
 title: Hello World
-description: This is my first post.  Look at me Mom!
+description: Kevin Feiertag is a Network Engineer with 14+ years of experience in Cisco, Wi-Fi, and datacenter networking. Follow his journey into automation with Git, Python, Docker and pyATS, plus homelab projects, wireless insights, and smart home experiments.
 date: 2025-05-01 12:00:00:01 +/-0000
-categories: [Random, Hello]
-tags: [hello,aboutme]     # TAG names should always be lowercase
+categories: [Personal, AboutMe]
+tags: [networking, automation, python, git, docker, homelab, cisco, wifi]     # TAG names should always be lowercase
 toc: true
 # comments: active
 image:
@@ -14,51 +14,49 @@ published: true
 
 ## Hello World!
 
-Welcome to my new website! 
+Welcome to my site, I'm glad you're here. 
 
 ## Who am I
 
-I am a husband and father.
+I'm Kevin, a husband, father, and livelong learner with a passion for technology and problem-solving
 
-## How do I make a living
+## My Career Journey
 
-With over 14 years of experience in the tech industry and a prior background in food manufacturing, I’ve had the opportunity to work across diverse industries and roles, gaining a broad range of expertise. My career journey has taken me from live television broadcast operations to supporting a high-performing school district, and now contributing to a Fortune 500 company.
+WIth more than **14 years of experience** in the tech industry (and an earlier career in food manufacturing), I've had the opportunity to work across diverse industries and roles. My path has taken e from **live television broadcast operations**, to **supporting a high-performing school district**, to my current role contributing at an **aspiring Fortune 500 company** as a Network engineer. 
 
-I’ve held positions such as Technician, Network Systems Analyst, and Network Engineer, but my skills extend far beyond networking. I’ve supported various facets of the organizations I’ve worked for, leveraging my adaptability and problem-solving abilities to make meaningful contributions wherever needed.
+Along the way, I've held positions such as **Technician, Network Systems Analyst, and Network Engineer** deveolping expertise in:
 
-This unique blend of experiences has shaped my approach to technology and teamwork, and I’m passionate about continuous learning and applying my knowledge to create impactful solutions.
+* Networking (Cisco, Palo Alto, SD-WAN / Viptela, HP, Ubiquiti, pfsense, AWS/Azure/OCI Hyperscalers)
+* Virtualization (Windows Hypervisor, VMware)
+* Server & Datacenter Management
+* Load Balancing (AVI, F5, HA Proxy)
+* Identity & Access (GSuite, Active Directory, MDM, Content Filtering)
 
-### Experience
-* GSuite Suite
-* Active Directory (User Management, Group Policy)
-* Virtualization (Windows Hypervisor, Vmware)
-* Server Datacenter Management
-* Load Balancing (HA Proxy, F5, Avi)
-* Mobile Device Management
-* Content Filtering
-* Print Server Management
-* Cisco
-* Palo Alto 
-* Sdwan (Viptella)
+This blend of experience taught me to be adaptable, collaborative, and relentlessly curious.
 
-## Hobbies
-Outside of work, I’m a tech enthusiast who loves exploring new gadgets, tools, and trends. I’m also a fan of grilling and barbecuing, where I get to combine creativity and precision to craft the perfect meal.
+## Current Focus
 
-In my earlier years, I enjoyed playing guitar, and while I don’t play as often these days, music remains a big part of my life. These hobbies remind me to stay curious, creative, and balanced in everything I do.
+Right now, I'm **building my skills in automation and modern infrastructure**.  The industry has been changing and I am starting to dive into Git, Python, Docker, and Cisco pyATS.  My goal is to bridge traditional networking with automation, helping teams scale faster, reduce errors, and free up engineers to focus on innovation.
 
-## Tech Projects
-I’m passionate about exploring new technologies and finding creative ways to integrate them into my home. Whether it’s automating my garage door, monitoring power levels on critical circuits to protect my freezer full of food from power loss, or experimenting with smart home setups, I enjoy turning everyday challenges into innovative solutions.
+I document what I'm learning on this blog, so others can follow along and (hopefully) benefit from my journey.
 
-One of my favorite tools is Home Assistant, which I use to build and customize automations that make my home smarter and more efficient. My home lab is another area where I get to experiment—it’s equipped with network gear and a server, giving me the perfect environment to test, learn, and grow my technical skills.
+## Beyond Work
 
-Currently, I’m diving into Git to improve my version control skills and plan to explore and Docker next to expand my knowledge of containerization and modern development workflows. For me, technology isn’t just a career—it’s a hobby and a constant source of inspiration.
+Outside the office, you'll find me:
 
-## Philanthropy
-Giving back is an important part of who I am. I’m proud to serve as a board member for JustHelpOne.com, an organization dedicated to supporting individuals and families who have experienced loss through natural disasters.
+* Experimenting in my **homelab** with Home Assistant, smart home projects, and network gear
+* **Grilling and barbecuing** (because tuning fire and smoke isn't so different from tuning configs)
+* Staying creative through **music and guitar**
+* Exploring new podcasts, books, and tools to keep my curiousity sharp
 
-We focus on helping those who have lost more than just their homes and personal belongings, providing them with resources and support to rebuild their lives. This work has been deeply rewarding and aligns with my belief in making a positive impact wherever possible.
+## Giving Back
+
+I also serve as a **board member for JustHelpOne.com**, a nonprofit supporting individuals and families who have experienced devastating loss through natural disasters. Helping others rebuild aligns with my belief that technology and community should both serve a greater purpose. 
 
 ## Lets Connect
-Whether you’re here to learn, collaborate, or simply explore, I hope you find value in what I share on this site. If you’d like to connect, feel free to reach out to me via [insert preferred contact method, e.g., email, LinkedIn, etc.].
 
-I’m always open to discussing new opportunities, exchanging ideas, or simply getting to know others who share my passion for technology and growth. Thanks for stopping by—I look forward to connecting with you!
+Whether you're here to learn, collaborate, or just explore, I'd love to connect. I try to regularly share updates about **networking, automation, and homelab experiments** on this blog and on LinkedIN. 
+
+Feel free to reach out if you'd like to exchange ideas, share resources, or chat about technology, careers, or even BBQ tips. 
+
+Thanks for visiting, I'm looking forward to the journey ahead. 
