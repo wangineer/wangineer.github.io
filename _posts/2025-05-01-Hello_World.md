@@ -1,6 +1,6 @@
 ---
 title: Hello World
-description: Kevin Feiertag is a Network Engineer with 14+ years of experience in Cisco, Wi-Fi, and datacenter networking. Follow his journey into automation with Git, Python, Docker and pyATS, plus homelab projects, wireless insights, and smart home experiments.
+description: I'm a Network Engineer with 14+ years of experience in Cisco, Wi-Fi, and datacenter networking. Follow my journey into automation with Git, Python, Docker and pyATS, plus homelab projects, wireless insights, and smart home experiments.
 date: 2025-05-01 12:00:00:01 +/-0000
 categories: [Personal, AboutMe]
 tags: [networking, automation, python, git, docker, homelab, cisco, wifi]     # TAG names should always be lowercase
@@ -18,11 +18,11 @@ Welcome to my site, I'm glad you're here.
 
 ## Who am I
 
-I'm Kevin, a husband, father, and livelong learner with a passion for technology and problem-solving
+I'm Kevin, a husband, father, and life long learner with a passion for technology and problem-solving
 
 ## My Career Journey
 
-WIth more than **14 years of experience** in the tech industry (and an earlier career in food manufacturing), I've had the opportunity to work across diverse industries and roles. My path has taken e from **live television broadcast operations**, to **supporting a high-performing school district**, to my current role contributing at an **aspiring Fortune 500 company** as a Network engineer. 
+With more than **14 years of experience** in the tech industry (and an earlier career in food manufacturing), I've had the opportunity to work across diverse industries and roles. My path has taken e from **live television broadcast operations**, to **supporting a high-performing school district**, to my current role contributing at an **aspiring Fortune 500 company** as a Network engineer. 
 
 Along the way, I've held positions such as **Technician, Network Systems Analyst, and Network Engineer** deveolping expertise in:
 

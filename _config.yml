@@ -16,7 +16,7 @@ timezone: America/New_York
 
 title: Wangineer # the main title
 
-tagline: A Snarky Engineers Experience # it will display as the subtitle
+tagline: Sharing my journey as a network engineer learning automation, homelab tinkering, and smarter networking # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Kevin Feiertag is a Network Engineer with 14+ years of experience in Cisco, Wi-Fi, and datacenter networking. Follow his journey into automation with Git, Python, Docker, and pyATS, plus homelab projects, wireless insights, and smart home experiments.

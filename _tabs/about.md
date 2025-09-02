@@ -14,7 +14,7 @@ I'm Kevin, a husband, father, and livelong learner with a passion for technology
 
 ## My Career Journey
 
-WIth more than **14 years of experience** in the tech industry (and an earlier career in food manufacturing), I've had the opportunity to work across diverse industries and roles. My path has taken e from **live television broadcast operations**, to **supporting a high-performing school district**, to my current role contributing at an **aspiring Fortune 500 company** as a Network engineer. 
+With more than **14 years of experience** in the tech industry (and an earlier career in food manufacturing), I've had the opportunity to work across diverse industries and roles. My path has taken e from **live television broadcast operations**, to **supporting a high-performing school district**, to my current role contributing at an **aspiring Fortune 500 company** as a Network engineer. 
 
 Along the way, I've held positions such as **Technician, Network Systems Analyst, and Network Engineer** deveolping expertise in:
 
