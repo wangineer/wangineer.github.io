@@ -18,7 +18,7 @@ Welcome to my site, I'm glad you're here.
 
 ## Who am I
 
-I'm Kevin, a husband, father, and life long learner with a passion for technology and problem-solving
+I’m Kevin, a husband, father, and network systems engineer with over 14 years of experience. This blog is where I document what I’m learning about automation — from Git and Python to Docker and homelabs — and share it with others in the networking community. Think of this as a learn-in-public notebook where wins, mistakes, and aha moments all have a place.
 
 ## My Career Journey
 
