@@ -118,7 +118,7 @@ rm -rm .git
 ```
 
 ## How to Remove a file from being tracked
-```
+```bash
 rm --cached filename.txt
 ```
 
