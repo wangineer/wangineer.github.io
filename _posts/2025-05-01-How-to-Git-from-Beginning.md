@@ -117,6 +117,10 @@ git config --global user.email@mail.com
 rm -rm .git
 ```
 
+## How to Remove a file from being tracked
+```
+rm --cached filename.txt
+```
 
 ## How to Clone repo from Github
 Go to the website and click the "Clone or Download" He did this in his regular desktop folder  it created a folder called "fetch" and it becomes a repo automcatically with the folder added.  YOU DO NOT NEED TO Configure "git init"
