@@ -18,7 +18,7 @@ As network engineers, we know our industry is constantly evolving, and staying a
 
 ## How to Git Git (Install/Download)
 
-Download Git [**here**](https://git-scm.com){:target="_blank"} https://git-scm.com
+Download Git [**here**](https://git-scm.com){:target="_blank"} (https://git-scm.com)
 
 
 > Macbooks have `git` installed automatically
@@ -35,7 +35,7 @@ apt-get install git   (version will not be the same as what is shared on website
 
 Go to [**https://git-scm.com**][gitdownload] and click to download.  The site will know you are running windows.
 
-> Once installed you can open the program `git bash`  This will allow you to use all of the linux commands usedto work with Git.
+> Once installed you can open the program `git bash`  This will allow you to use all of the linux commands used to work with Git.
 {: .prompt-tip }
 
 
@@ -48,7 +48,7 @@ git version 2.34.1
 ```
 
 
-## Now what you've Gotten Git, you can finally Git Started (Video 3)
+## Now that you've Gotten Git, you can finally Git Started
 
 ### How to Create a Local Git Repository
 
@@ -118,7 +118,7 @@ rm -rm .git
 ```
 
 ## How to Remove a file from being tracked
-```bash
+```
 rm --cached filename.txt
 ```
 
