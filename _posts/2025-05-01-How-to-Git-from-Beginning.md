@@ -117,9 +117,10 @@ git init
 ```
 
 3. Configure the .gitconfig file
+```
 - git config --global user.name 'Test Name'
 - git config --global user.email test@mail.com
-
+```
 
 ## Quick Commands
 ###Lists all files including hidden in the directory
@@ -145,4 +146,3 @@ git config --list
 
 ## Resources
 [**https://git-scm.com**](https://git-scm.com){:target="_blank"}
-[gitdownload]: https://git-scm.com

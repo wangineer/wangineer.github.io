@@ -5,7 +5,7 @@ date: 2025-06-26 12:00:00:01 +/-0000
 categories: [Proxmox, Troubleshoot]
 tags: [server,raid,mirror,zfs,zpool]     # TAG names should always be lowercase
 toc: true
-# comments: active
+comments: active
 image:
   path: '/assets/img/headers/proxmox.webp'
 pin: false

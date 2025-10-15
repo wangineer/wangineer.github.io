@@ -5,7 +5,7 @@ date: 2025-10-01 12:00:00:01 +/-0000
 categories: [Repair, computer]
 tags: [macbook, battery]     # TAG names should always be lowercase
 toc: true
-# comments: active
+comments: active
 image:
   path: '/assets/img/posts/how-to-replace-battery/bloatedbattery.webp'
 pin: false
