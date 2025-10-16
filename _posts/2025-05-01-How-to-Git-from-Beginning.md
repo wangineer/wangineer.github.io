@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Gittin on Git
 description: Discover how a Network Engineer embarks on a beginner-friendly journey to learn Git—exploring its potential to adapt to a changing tech landscape, document key lessons, and troubleshoot effectively in this first post of an insightful series.
 date: 2025-05-01 12:00:00:01 +/-0000
