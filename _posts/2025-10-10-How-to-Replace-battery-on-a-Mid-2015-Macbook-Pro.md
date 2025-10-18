@@ -7,7 +7,7 @@ tags: [macbook, battery]     # TAG names should always be lowercase
 toc: true
 comments: active
 image:
-  path: '/assets/img/posts/how-to-replace-battery/bloatedbattery.webp'
+  path: '/assets/img/headers/pregnantbattery.webp'
 pin: false
 published: TRUE
 ---

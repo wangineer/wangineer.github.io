@@ -5,7 +5,7 @@ date: 2025-05-01 12:00:00:01 +/-0000
 categories: [Personal, AboutMe]
 tags: [networking, automation, python, git, docker, homelab, cisco, wifi]     # TAG names should always be lowercase
 toc: true
-# comments: active
+# comments: false
 image:
   path: '/assets/img/headers/hello.webp'
 pin: true
