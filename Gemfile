@@ -8,8 +8,8 @@ gem "jekyll-theme-chirpy", "~> 7.0", ">= 7.0.1"
 
 # make below 5.0 for publishing
 # make below 3.0 for testing
-# gem "html-proofer", "~> 5.0", group: :test
-gem "html-proofer", "~> 3.0", group: :test
+gem "html-proofer", "~> 5.0", group: :test
+# gem "html-proofer", "~> 3.0", group: :test
 
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
