@@ -2,14 +2,14 @@
 title: How to Replace a Battery on a Mid 2015 Macbook Pro
 description: Step-by-step guide to replacing the battery on a 2015 MacBook Pro. A network engineer's personal story of restoring his dad's old laptop—tips, tools, and lessons learned from the repair.
 date: 2025-10-01 12:00:00:01 +/-0000
-categories: [Repair, computer]
+categories: [Repair, Computer]
 tags: [macbook, battery]     # TAG names should always be lowercase
 toc: true
 comments: true
 image:
   path: '/assets/img/headers/pregnantbattery.webp'
 pin: false
-published: TRUE
+published: True
 ---
 # How to Replace a battery on a Mid 2015 Macbook Pro
 

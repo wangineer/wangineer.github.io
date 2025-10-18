@@ -2,7 +2,7 @@
 title: How to use Regular Expression
 description: Discover how a Network Engineer embarks on a beginner-friendly journey to learn Git—exploring its potential to adapt to a changing tech landscape, document key lessons, and troubleshoot effectively in this first post of an insightful series.
 date: 2025-05-02 12:00:00:01 +/-0000
-categories: [linux, regex]
+categories: [linux, Regex]
 tags: [sed,grep]     # TAG names should always be lowercase
 toc: true
 comments: true
