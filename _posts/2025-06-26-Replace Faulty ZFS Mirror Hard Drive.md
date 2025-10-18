@@ -7,7 +7,7 @@ tags: [server,raid,mirror,zfs,zpool]     # TAG names should always be lowercase
 toc: true
 comments: active
 image:
-  path: '/assets/img/headers/proxmox.webp'
+  path: '/assets/img/headers/proxmoxraid1.webp'
 pin: false
 published: True
 ---
