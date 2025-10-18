@@ -5,11 +5,11 @@ date: 2025-06-26 12:00:00:01 +/-0000
 categories: [Proxmox, Troubleshoot]
 tags: [server,raid,mirror,zfs,zpool]     # TAG names should always be lowercase
 toc: true
-comments: active
+comments: true
 image:
   path: '/assets/img/headers/proxmoxraid1.webp'
 pin: false
-published: True
+published: true
 ---
 ## Stats:
  - ZFS Mirror using two 500gb hard drives
