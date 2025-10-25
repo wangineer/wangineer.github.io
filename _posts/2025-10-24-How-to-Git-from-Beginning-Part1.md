@@ -8,7 +8,7 @@ toc: true
 comments: true
 image:
   path: '/assets/img/headers/gitinit.webp'
-#  alt: 'Terminal showing Git initialization and configuration steps for beginners'
+  alt: 'Terminal showing Git initialization and configuration steps for beginners'
 #  lqip: true
 pin: false
 published: true
