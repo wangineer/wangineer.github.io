@@ -208,7 +208,7 @@ Stay up to date with the full series and follow along as we dive deeper into Git
 | 3 | Behind Git (TBD) | [Part 3](#) |
 | 4 | Git into Branching (TBD)  | [Part 4](#) |
 | 5 | Three-way merge and Rebasing (TBD)  | [Part 5](#) |
-| * | More to Come  | [Part #](#) |
+| * | More to Come (TBD) | [Part #](#) |
 
 
 > Tip: Bookmark this series so you can quickly reference each part as you learn.
