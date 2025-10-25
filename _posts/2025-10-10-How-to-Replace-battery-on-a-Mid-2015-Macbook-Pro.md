@@ -8,6 +8,7 @@ toc: true
 comments: true
 image:
   path: '/assets/img/headers/pregnantbattery.webp'
+  alt: 'Pregnant battery pointing at laptop'
 pin: false
 published: True
 ---

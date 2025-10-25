@@ -8,6 +8,7 @@ toc: true
 comments: true
 image:
   path: '/assets/img/headers/regex.webp'
+  alt: 'Terminal with the text /(reg)ex/'
 pin: false
 published: true
 ---

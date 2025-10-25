@@ -8,6 +8,7 @@ toc: true
 comments: true
 image:
   path: '/assets/img/headers/proxmoxraid1.webp'
+  alt: 'Two hard drives showing connected to Proxmox box in Raid 1'
 pin: false
 published: true
 ---
