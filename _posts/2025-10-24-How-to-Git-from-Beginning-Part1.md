@@ -8,16 +8,16 @@ toc: true
 comments: true
 image:
   path: '/assets/img/headers/gitaddremove.webp'
-  alt: 'Terminal showing Git initialization and configuration steps for beginners'
+  alt: 'Terminal showing git add, git rm, git commit - commands used when using git'
 #  lqip: true
 pin: false
 published: true
-#permalink: /series/git/gittin-on-git/
-#seo:
-#  title: "Learning Git as a Network Engineer | Git Series Part 1"
-#  description: "A hands-on beginner’s guide for network engineers to install, configure, and understand Git—laying the foundation for better version control and documentation."
-#  canonical: "https://wangineer.com/series/git/gittin-on-git/"
-#  keywords: ["git basics", "git tutorial", "git setup", "network engineer git", "version control guide"]
+permalink: /series/git/gittin-on-git/
+seo:
+  title: "Learning Git as a Network Engineer | Git Series Part 1"
+  description: "A hands-on beginner’s guide for network engineers to install, configure, and understand Git—laying the foundation for better version control and documentation."
+  canonical: "https://wangineer.com/series/git/gittin-on-git/"
+  keywords: ["git basics", "git tutorial", "git setup", "network engineer git", "version control guide"]
 ---
 
 ## Why Git Matters (Scenario)
