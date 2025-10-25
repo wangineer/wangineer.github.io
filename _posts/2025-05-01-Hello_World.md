@@ -8,7 +8,7 @@ toc: true
 comments: false
 image:
   path: '/assets/img/headers/hello.webp'
-  alt: 'Hand holding up hello! sign'
+  alt: 'Hand holding up Hello! sign'
 pin: true
 published: true
 ---
