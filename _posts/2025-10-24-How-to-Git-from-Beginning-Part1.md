@@ -7,7 +7,7 @@ tags: [gitinit, github, network-engineering, git-basics]
 toc: true
 comments: true
 image:
-  path: '/assets/img/headers/gitinit.webp'
+  path: '/assets/img/headers/gitaddremove.webp'
   alt: 'Terminal showing Git initialization and configuration steps for beginners'
 #  lqip: true
 pin: false
