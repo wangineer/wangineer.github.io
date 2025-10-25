@@ -3,7 +3,7 @@ title: "Gittin’ on Git (Git Series: Part 1)"
 description: "A Network Engineer begins a beginner-friendly journey into Git—learning how version control can streamline documentation, collaboration, and troubleshooting in an evolving network landscape."
 date: 2025-10-24 12:00:00 +/-0000
 categories: [Series, Git]
-tags: [gitinit, github, network-engineering, git-basics]
+tags: [git, gitinit, github, network-engineering, git-basics]
 toc: true
 comments: true
 image:
