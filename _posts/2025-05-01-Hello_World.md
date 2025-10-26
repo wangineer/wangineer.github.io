@@ -11,6 +11,14 @@ image:
   alt: 'Hand holding up Hello! sign'
 pin: true
 published: true
+  alt: 'Shell window with Git commands being shown'
+permalink: /posts/hello-world/
+seo:
+  title: "Hello World"
+  description: "Welcome to Wangineer — the personal blog of Kevin Feiertag, a network systems engineer exploring Git, Python, Docker, and homelab automation. Learn practical networking, automation, and tech career insights from real-world experience."
+  canonical: "https://wangineer.com/hello-world/"
+  keywords: "network automation, Git for network engineers, Python networking, homelab projects, Docker, pyATS, network engineer blog, tech career growth, automation in networking, Wangineer"
+  canonical: "https://wangineer.com/posts/hello-world/"
 ---
 
 ## Hello World!
