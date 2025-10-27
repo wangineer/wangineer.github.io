@@ -21,7 +21,7 @@ seo:
 
 | Part | Title | Link |
 |------|-------|------|
-| 1 | Gittin’ on Git | [Part 1](https://wangineer.com/series/git/gitten-on-git/) |
+| 1 | Gittin’ on Git | [Part 1](https://wangineer.com/series/git/gittin-on-git/) |
 | 2 | Git Basics | [Part 2](https://wangineer.com/series/git/git-basics/) |
 | 3 | Behind Git (TBD) | [Part 3](#) |
 | 4 | Git into Branching (TBD) | [Part 4](#) |
@@ -242,7 +242,7 @@ In **Part 3**, we’ll peek *behind the curtain* to explore what’s inside the 
 
 | Part | Title | Link |
 |------|-------|------|
-| 1 | Gittin’ on Git | [Part 1](https://wangineer.com/series/git/gitten-on-git/) |
+| 1 | Gittin’ on Git | [Part 1](https://wangineer.com/series/git/gittin-on-git/) |
 | 2 | Git Basics | [Part 2](https://wangineer.com/series/git/git-basics/) |
 | 3 | Behind Git (TBD) | [Part 3](#) |
 | 4 | Git into Branching (TBD) | [Part 4](#) |

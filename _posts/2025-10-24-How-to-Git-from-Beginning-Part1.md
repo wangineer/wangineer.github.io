@@ -203,11 +203,11 @@ Stay up to date with the full series and follow along as we dive deeper into Git
 
 | Part | Title | Link |
 |------|-------|------|
-| 1 | Gittin’ on Git | [Part 1](https://wangineer.com/series/git/gitten-on-git/) |
-| 2 | Lets Git Started (TBD) | [Part 2](#) |
+| 1 | Gittin’ on Git | [Part 1](https://wangineer.com/series/git/gittin-on-git/) |
+| 2 | Git Basics | [Part 2](https://wangineer.com/series/git/git-basics/) |
 | 3 | Behind Git (TBD) | [Part 3](#) |
-| 4 | Git into Branching (TBD)  | [Part 4](#) |
-| 5 | Three-way merge and Rebasing (TBD)  | [Part 5](#) |
+| 4 | Git into Branching (TBD) | [Part 4](#) |
+| 5 | Three-way merge and Rebasing (TBD) | [Part 5](#) |
 | * | More to Come (TBD) | [Part #](#) |
 
 
