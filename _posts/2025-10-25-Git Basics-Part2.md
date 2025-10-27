@@ -1,5 +1,5 @@
 ---
-title: "Git Basics for Network Engineers (Git Series: Part 2)"
+title: "Git Basics (Git Series: Part 2)"
 description: "Practical, hands-on examples of git add, git rm, git mv, git commit, and git commit --amend — explained for network engineers."
 date: 2025-10-25 12:00:00 +/-0000
 categories: [Series, Git]
