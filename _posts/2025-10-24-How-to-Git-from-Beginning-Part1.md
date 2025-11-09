@@ -140,8 +140,9 @@ git config --global --list
 | `HEAD`          | Points to current branch reference |
 | `hooks/`        | Scripts that run automatically on Git events |
 | `info/`         | Contains `exclude` file for ignored patterns |
-| `objects/`      | Stores commits, files, and history |
+| [```objects/```](https://wangineer.com/series/git/behind-git#objects/)      | Stores commits, files, and history |
 | `refs/`         | References to commits and branches |
+| [```index```](https://wangineer.com/series/git/behind-git#objects/) | File serves as staging area or cache |
 
 ---
 
@@ -197,7 +198,7 @@ Try this now in a folder on your machine or homelab. Drop a comment below with y
 - [Official Git Website](https://git-scm.com){:target="_blank"}
 - [Pro Git Book (Free)](https://git-scm.com/book/en/v2){:target="_blank"}
 
-## 🚀 Git Series Navigation
+## Git Series Navigation
 
 Stay up to date with the full series and follow along as we dive deeper into Git:
 
@@ -205,7 +206,7 @@ Stay up to date with the full series and follow along as we dive deeper into Git
 |------|-------|------|
 | 1 | Gittin’ on Git | [Part 1](https://wangineer.com/series/git/gittin-on-git/) |
 | 2 | Git Basics | [Part 2](https://wangineer.com/series/git/git-basics/) |
-| 3 | Behind Git (TBD) | [Part 3](#) |
+| 3 | Behind Git (TBD) | [Part 3](https://wangineer.com/series/git/behind-git/) |
 | 4 | Git into Branching (TBD) | [Part 4](#) |
 | 5 | Three-way merge and Rebasing (TBD) | [Part 5](#) |
 | * | More to Come (TBD) | [Part #](#) |

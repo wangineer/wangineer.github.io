@@ -9,7 +9,7 @@ comments: true
 pin: false
 published: true
 image:
-  path: '/assets/img/headers/gitpart2.webp'
+  path: '/assets/img/headers/gitbasics.webp'
   alt: 'Shell window with Git commands being shown'
 permalink: /series/git/git-basics/
 seo:
@@ -17,17 +17,6 @@ seo:
   description: "Learn how network engineers can use Git commands like git add, git commit, git rm, git mv, and git commit --amend to manage configuration and documentation efficiently."
   canonical: "https://wangineer.com/series/git/git-basics/"
   keywords: ["git add command", "git commit guide", "git rm tutorial", "git amend example", "network engineer git", "git workflow basics", "learn git 2025", "version control tutorial", "git for beginners", "git cli examples"]
----
-
-| Part | Title | Link |
-|------|-------|------|
-| 1 | Gittin’ on Git | [Part 1](https://wangineer.com/series/git/gittin-on-git/) |
-| 2 | Git Basics | [Part 2](https://wangineer.com/series/git/git-basics/) |
-| 3 | Behind Git (TBD) | [Part 3](#) |
-| 4 | Git into Branching (TBD) | [Part 4](#) |
-| 5 | Three-way merge and Rebasing (TBD) | [Part 5](#) |
-| * | More to Come (TBD) | [Part #](#) |
-
 ---
 
 ## Let’s Git Started (Scenario)
@@ -244,7 +233,7 @@ In **Part 3**, we’ll peek *behind the curtain* to explore what’s inside the 
 |------|-------|------|
 | 1 | Gittin’ on Git | [Part 1](https://wangineer.com/series/git/gittin-on-git/) |
 | 2 | Git Basics | [Part 2](https://wangineer.com/series/git/git-basics/) |
-| 3 | Behind Git (TBD) | [Part 3](#) |
+| 3 | Behind Git (TBD) | [Part 3](https://wangineer.com/series/git/behind-git/) |
 | 4 | Git into Branching (TBD) | [Part 4](#) |
 | 5 | Three-way merge and Rebasing (TBD) | [Part 5](#) |
 | * | More to Come (TBD) | [Part #](#) |

@@ -2,8 +2,8 @@
 title: How to Replace Mirror'd Hard Drive in ZFS Proxmox
 description: Mirror Mirror on the Wall!
 date: 2025-06-26 12:00:00:01 +/-0000
-categories: [Proxmox, Troubleshoot]
-tags: [server,raid,mirror,zfs,zpool]     # TAG names should always be lowercase
+categories: [Homelab, Proxmox]
+tags: [server,raid,mirror,zfs,zpool,homelab]     # TAG names should always be lowercase
 toc: true
 comments: true
 image:
