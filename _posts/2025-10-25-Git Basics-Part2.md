@@ -197,8 +197,6 @@ git log --oneline
 
 ## Quick Reference Options
 
-### **Option B — Table View**
-
 | Command | Description |
 |----------|--------------|
 | `git add readme.md` | Add specific file to staging |
