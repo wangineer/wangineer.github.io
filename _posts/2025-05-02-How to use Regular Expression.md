@@ -18,7 +18,6 @@ Regular expression is a cool tool used to grab outputs.  I use it all the time w
 
 The interesting part to this, is that Cisco and Linux, and Solarwinds, and other tools all use different forms of regular expression.  Hopefully the below will provide some good notes to review and understand how to use Regex in my progress to learn Automation and and Pyats.
 
-
 ## Basics
 This searches for anything with"express" in the document
 ```bash
