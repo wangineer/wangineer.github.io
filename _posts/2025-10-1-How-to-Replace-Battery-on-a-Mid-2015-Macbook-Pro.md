@@ -12,7 +12,7 @@ image:
 pin: false
 published: True
 ---
-# How to Replace a battery on a Mid 2015 Macbook Pro
+# How to Replace a Battery on a Mid 2015 Macbook Pro
 
 ## Scenario:
 Two years ago, my dad passed away. Among the many things he left behind were boxes of external drives, cords, and his old MacBook Pro (Mid-2015) — a machine full of memories, photos, and projects.
