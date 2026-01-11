@@ -70,6 +70,7 @@ sudo dnf install libheif libheif-tools
 To convert
  - First line converts ***heic*** to ***png***
  - Second line converts ***png*** to ***webp***
+
 ```
 heif-convert input.heic temp.png
 cwebp temp.png -o output.webp
