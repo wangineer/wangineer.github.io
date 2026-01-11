@@ -1,6 +1,6 @@
 ---
-title: "How to convert images into webp format"
-description: "Learn how I convert my photos from my iphone or other image formats into webp files optimized for this git website."
+title: How to convert images into webp format
+description: Learn how I convert my photos from my iphone or other image formats into webp files optimized for this git website.
 date: 2026-01-11 12:00:00:01 +/-0000
 categories: [Linux, Optimize]   # Example: [Networking, Homelab]
 tags: [cwebp, heic, website, jpeg]    # Add relevant keywords
