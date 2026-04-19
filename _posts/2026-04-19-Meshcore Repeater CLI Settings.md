@@ -10,7 +10,7 @@ pin: false
 published: true
 permalink: /homelab/meshcore-repeater-rak-wisblock-settings
 image:
-  path: '/assets/img/headers/meshcore-repeater.webp'
+  path: '/assets/img/headers/meshcore.webp'
 seo:
   title: "MeshCore Repeater Advanced Tips (CLI) (RAK WisBlock)"
   description: "A list of a few Meschore Repeater settings I used on the RAK WisBlock starter kit and 1W Booster, including OTA fix, RX gain tuning, AGC optimization, and radio performance tweaks."
