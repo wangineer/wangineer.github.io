@@ -1,29 +1,33 @@
 ---
 layout: post
-title: "Replacing a Faulty Cisco Catalyst 9300X Stack Member"
+title: "Replacing a Faulty Cisco Catalyst 9300X: Prestaging and Cable Order"
 date: 2026-07-10 08:00:00 -0700
 categories: [Networking, Cisco]
-tags: [Cisco, Catalyst 9300X, StackWise, IOS XE, Troubleshooting, CCNP]
-author: kevin
-description: "A practical walkthrough for prestaging and replacing a failed Cisco Catalyst 9300X StackWise member, including stack speed, member numbering, software alignment, and validation commands."
+tags: [Cisco, Catalyst 9300X, StackWise, StackPower, IOS XE, Troubleshooting, CCNP]
+description: "A practical walkthrough for replacing a failed Cisco Catalyst 9300X stack member, with emphasis on prestaging, StackWise speed, and the safe order for disconnecting and reconnecting power, StackPower, and StackWise cables."
 permalink: /posts/replace-cisco-catalyst-9300x-stack-member/
 image:
-  path: /assets/img/headers/cisco-9300x-stack-member-replacement.webp
+  path: /assets/img/posts/cisco-9300x-stack-member-replacement.webp
   alt: "Cisco Catalyst 9300X switch being added to a StackWise stack"
 seo:
-  title: "How to Replace a Faulty Cisco Catalyst 9300X Stack Member"
-  description: "Learn how to prestage a replacement Cisco Catalyst 9300X, match IOS XE and StackWise speed, preserve the member number, and validate the repaired stack."
+  title: "Replace a Cisco Catalyst 9300X Stack Member Safely"
+  description: "Learn how to prestage a Cisco Catalyst 9300X replacement and use the correct power, StackPower, and StackWise cable order to avoid a stack merge or unexpected reload."
   canonical: /posts/replace-cisco-catalyst-9300x-stack-member/
-  keywords: "Cisco 9300X replacement, Catalyst 9300X StackWise, replace stack member, switch stack-speed high, IOS XE auto upgrade"
+  keywords: "Cisco 9300X replacement, Catalyst 9300X StackWise, StackPower cable order, replace stack member, stack merge, switch stack-speed high, IOS XE auto upgrade"
 ---
 
 Replacing a failed switch in a Catalyst stack sounds straightforward: rack the replacement, move the cables, and power it on.
 
-The part that caught me was the **StackWise ring speed**.
+Two details made this replacement less routine:
 
-The replacement Catalyst 9300X was otherwise ready, but it would not join the existing high speed stack. It came up as its own active switch because its StackWise speed did not match the running stack. The existing stack was operating at 1 Tbps, while the replacement was still configured for the lower 480 Gbps mode.
+1. The replacement Catalyst 9300X had to use the same StackWise ring speed as the existing stack.
+2. The power, StackPower, and StackWise cables had to be removed and installed in the correct order.
 
-This post documents the prestaging and validation process I would use the next time.
+The StackWise speed mismatch prevented the replacement from joining the existing 1 Tbps stack. The replacement was still configured for the lower 480 Gbps mode and came up as its own active switch.
+
+The cable order presented the larger operational risk. A switch connected to StackPower may still be receiving power even after its normal AC power cords are removed. If both StackWise data cables are removed while that switch is still powered, it can become an isolated standalone stack. Reconnecting that powered switch to the production stack can trigger a stack merge, an election, and an unexpected reload of the stack.
+
+This post documents both the prestaging work and the physical cable sequence I would use the next time.
 
 > This is a sanitized example. It assumes an identical Catalyst 9300X is replacing failed member 3 in an existing high speed StackWise ring. Confirm the exact model, supported IOS XE release, licensing, boot mode, and change procedure for your environment.
 {: .prompt-info }
@@ -39,9 +43,11 @@ A replacement member should match the existing stack in several areas:
 - StackWise ring speed
 - Stack member number
 - Stack priority
-- Stack cable layout
+- StackWise data cable layout
+- StackPower topology and available power budget
+- The order in which power, StackPower, and StackWise cables are moved
 
-A mismatch can leave the replacement in a `V-Mismatch` state, create a separate active island, or split the stack into subrings.
+A mismatch can leave the replacement in a `V-Mismatch` state, create a separate active island, or split the stack into subrings. An incorrect cable sequence can also create a powered standalone switch that later causes a stack merge when it is reconnected.
 
 ## 1. Record the state of the working stack
 
@@ -53,6 +59,10 @@ show switch detail
 show switch stack-ring speed
 show switch stack-bandwidth
 show switch stack-ports summary
+show stack-power detail
+show stack-power budgeting
+show stack-power neighbors
+show environment power all
 show version
 show boot
 show install summary
@@ -78,6 +88,28 @@ Switch#   Role      Mac Address     Priority Version State
 ```
 
 The failed member number is important because interface configuration is tied to that number. An identical replacement that joins as member 3 can inherit the existing configuration for interfaces such as `TenGigabitEthernet3/0/1`.
+
+Before disconnecting any power source, also record the StackPower topology and budget:
+
+```text
+C9300X-STACK# show stack-power detail
+
+Power Stack                      Stack   Stack    Total   Rsvd    Alloc   Sw_Avail
+Name                             Mode    Topology Pwr(W)  Pwr(W)  Pwr(W) Pwr(W)
+---------------------------------------------------------------------------------
+Powerstack-1                     SP-PS   Ring     4290    30      1880   2380
+
+Switch 3:
+  Port 1 status: Connected
+  Port 2 status: Connected
+  Neighbor on port 1: Switch 2
+  Neighbor on port 2: Switch 1
+```
+
+This confirms that the failed member is participating in a StackPower ring. It also helps determine whether removing its local power supplies or StackPower links could reduce the available power enough to cause PoE load shedding or power down another member.
+
+> Do not treat StackPower as a passive cable. It carries power. A switch can remain powered through StackPower after both local AC power cords are removed.
+{: .prompt-warning }
 
 Check the current and next boot StackWise speed:
 
@@ -368,22 +400,176 @@ Switch#   Role      Mac Address     Priority Version State
 
 It is active only because it is currently operating by itself.
 
-## 7. Power off and cable the replacement
+## 7. Follow the cable sequence exactly
 
-Before connecting the replacement to the live stack:
+The physical replacement is not simply a matter of moving every cable from the old chassis to the new one.
 
-1. Shut down the standalone replacement.
-2. Confirm the old failed member is physically disconnected.
-3. Rack the replacement.
-4. Move network, uplink, power, and StackPower connections according to the approved cable plan.
-5. Connect the StackWise cables while the replacement is powered off.
-6. Confirm the stack cables form the intended ring.
-7. Power on the replacement and monitor the console.
+There are three separate connection types involved:
 
-> Do not connect a powered on standalone switch to a powered on stack. That can trigger a stack merge and cause an unexpected election or reload.
+| Connection | Purpose | Important behavior |
+|---|---|---|
+| AC or DC power cords | Provide local power to the switch power supplies | Removing them may not turn off a switch that is still receiving StackPower |
+| StackPower cables | Share power between stack members | A connected StackPower cable can keep the chassis powered |
+| StackWise cables | Carry the data stack control and forwarding traffic | Connecting a powered standalone switch can trigger a stack merge and reload |
+
+The basic rule is:
+
+> **Removal order:** local power, StackPower, confirm the switch is off, then StackWise.
+>
+> **Installation order:** StackWise first, then StackPower, then local power.
 {: .prompt-danger }
 
-If the software, member number, stack speed, and hardware all match, the replacement should join as member 3 and receive the configuration already associated with that member.
+### Before touching any cable
+
+Validate the target member and the health of both stack rings:
+
+```console
+show switch
+show redundancy
+show switch stack-ports summary
+show switch stack-ring speed
+show stack-power detail
+show stack-power budgeting
+show stack-power neighbors
+show environment power all
+```
+
+Confirm:
+
+- The correct failed member has been identified
+- Whether the failed member is active, standby, or a regular member
+- The StackWise data ring is healthy before the change
+- The StackPower topology and neighbor relationships are documented
+- The remaining StackPower budget can support the stack when the failed member's local power supplies are removed
+- Console access is available to the stack and the replacement
+
+> This procedure assumes the failed switch is not the active member. Removing the active switch causes the standby to become active. That is a separate control-plane event and should be explicitly included in the change plan.
+{: .prompt-info }
+
+### Remove the failed switch
+
+Use this order:
+
+#### 1. Remove the local power cords
+
+Disconnect every AC or DC input from the failed switch, including both power supplies when two are installed.
+
+Do not assume the switch is off yet.
+
+#### 2. Remove the StackPower cables
+
+Disconnect the StackPower cables from the failed member according to the documented power-ring cable plan.
+
+StackPower is a power source. The switch may remain fully operational after its local power cords are removed and may not turn off until the StackPower connections are also removed.
+
+When modifying a live StackPower ring, avoid opening more of the power ring than the approved design requires. Cisco recommends that an operational StackPower ring be broken at only one point at a time to reduce the chance of service interruption. Confirm the available power budget before each change.
+
+#### 3. Confirm the chassis is completely powered off
+
+Before touching either StackWise data cable, verify:
+
+- All switch LEDs are off
+- Both power-supply LEDs are off
+- The console no longer responds
+- The stack reports the member as removed
+- No StackPower connection is still supplying the chassis
+
+```console
+show switch
+show stack-power detail
+show stack-power neighbors
+```
+
+Example:
+
+```text
+C9300X-STACK# show switch
+
+                                           H/W   Current
+Switch#   Role      Mac Address     Priority Version State
+------------------------------------------------------------
+*1        Active    00aa.11bb.2200     15     V02     Ready
+ 2        Standby   00aa.11bb.2300     14     V02     Ready
+ 3        Member    0000.0000.0000      0              Removed
+```
+
+#### 4. Remove both StackWise data cables
+
+Only after the switch is confirmed fully powered off should the StackWise data cables be disconnected from the failed member.
+
+Label each cable before removal. Record which neighbor and StackWise port each cable connects to. Do not rely only on the physical position of the switches in the rack.
+
+#### 5. Remove the front-panel network connections
+
+Move or label access links, uplinks, port-channel members, console, management, and any other front-panel connections. The failed chassis can then be removed from the rack.
+
+### Install the replacement switch
+
+The replacement must remain completely unpowered while the StackWise data cables are connected.
+
+That means:
+
+- Local AC or DC power cords are disconnected
+- Both StackPower cables are disconnected
+- All LEDs are off
+- The switch is not still powered from a prestaging connection
+
+Use this order:
+
+#### 1. Rack the replacement while it is unpowered
+
+Confirm the serial number, model, member number, IOS XE version, install mode, license level, priority, and next-boot StackWise speed.
+
+#### 2. Connect both StackWise data cables first
+
+Reconnect the StackWise cables to the exact ports recorded during removal. Finger-tighten the connector screws and verify that the intended full-ring topology is restored.
+
+Do not connect either power source before the StackWise data cables are in place.
+
+#### 3. Reconnect the front-panel network connections
+
+Move the access links, uplinks, port-channel members, management, and other network connections while the replacement is still unpowered.
+
+This prevents interfaces from becoming active before the replacement has joined the stack and received the configuration associated with member 3.
+
+#### 4. Connect the StackPower cables
+
+Reconnect the StackPower cables according to the recorded topology.
+
+> The replacement may begin booting as soon as the first live StackPower cable is attached. At this point, both StackWise data cables must already be connected.
+{: .prompt-warning }
+
+Monitor the console as soon as StackPower is connected.
+
+#### 5. Connect the local power cords last
+
+Connect the local AC or DC power inputs after the StackWise and StackPower cables are secured.
+
+The replacement should boot, discover the active stack, and join as member 3.
+
+### Why the reverse order matters
+
+The dangerous sequence is:
+
+1. Power on the replacement as a standalone switch
+2. Allow it to boot as its own active switch
+3. Connect its StackWise cables to the live production stack
+
+That is a powered stack merge. Cisco documents that merging powered-on stacks causes the switches to reload and elect a new active member.
+
+The safe sequence is:
+
+```text
+REMOVE:
+Local power -> StackPower -> verify completely off -> StackWise
+
+INSTALL:
+StackWise -> network cables -> StackPower -> local power
+```
+
+The replacement must never be a powered standalone switch at the moment its StackWise data cables are connected to the production stack.
+
+If the software, member number, StackWise speed, hardware, and cable sequence are correct, the replacement should join as member 3 and receive the configuration already associated with that member.
 
 ## 8. Validate the repaired stack
 
@@ -486,9 +672,14 @@ Combining the stack speed and renumber changes before the same reload can reduce
 
 ## What I learned
 
-The replacement hardware was not the difficult part. The important lesson was that **StackWise speed is part of compatibility**.
+The replacement hardware was not the difficult part. The two important lessons were:
+
+1. **StackWise speed is part of compatibility.**
+2. **The cable sequence determines whether the replacement joins safely or creates a powered stack merge.**
 
 A C9300X configured for 480 Gbps cannot form a stack link with members operating at 1 Tbps. When the speeds do not match, the replacement may look healthy from the console but remain isolated as its own active switch.
+
+Just as importantly, removing normal power cords does not guarantee that a StackPower-connected switch is off. The safe approach is to remove local power, remove StackPower, verify that the chassis is completely off, and only then remove the StackWise data cables. Installation is the reverse: StackWise first, followed by StackPower and local power.
 
 The commands I would always capture before and after a replacement are:
 
@@ -498,6 +689,10 @@ show running-config | include ^switch.*provision
 show switch stack-ring speed
 show switch stack-ports summary
 show switch stack-bandwidth
+show stack-power detail
+show stack-power budgeting
+show stack-power neighbors
+show environment power all
 show install summary
 show boot
 ```
@@ -508,12 +703,17 @@ Those commands quickly answer the most important questions:
 - Are active, standby, and member roles correct?
 - Is the stack a full ring?
 - Do the stack ports have valid neighbors?
-- Is the ring operating at the expected speed?
+- Is the data ring operating at the expected speed?
+- Is the StackPower topology correct and adequately powered?
 - Is every member running the committed IOS XE package?
+- Was the replacement connected to StackWise before it received power?
 
 ## Cisco documentation used
 
 - *Managing Switch Stacks, Cisco Catalyst 9300 Series*
+- *Understanding Cisco StackPower*
+- *Configure and Troubleshoot StackPower on Catalyst 9300 Switches*
+- *Cisco Catalyst 9300 Series Hardware Installation Guide*
 - *Configuring High Speed Stacking, Cisco Catalyst 9300 Series*
 - *Verify and Troubleshoot StackWise on Catalyst 9200 and 9300*
 - *Upgrade Guide for Catalyst 9000 Switches*
