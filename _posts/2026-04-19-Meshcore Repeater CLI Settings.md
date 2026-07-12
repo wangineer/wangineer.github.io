@@ -29,7 +29,7 @@ This post shares a few of the configurations I applied across all of the repeate
 ## Hardware Used
 
 ### Boards
-- [RAK WisBlock Starter Kit (RAK4631)](https://amzn.to/4etK6uC)*
+- [RAK WisBlock Starter Kit (RAK4631)](https://amzn.to/4aOIXLG)*
 - [RAK 1W Booster](https://store.rakwireless.com/products/meshtastic-1w-lora-booster-kit-rak3401?srsltid=AfmBOopKlzZhE7vclP5BesbTbIo2xV0_icCDnCJA3-dQf4NmOGCbwAq6&variant=45678368882886) - I bought from AliExpress
 
 > Make sure to purchase the 915mhz model if in the United States.
@@ -47,14 +47,16 @@ This post shares a few of the configurations I applied across all of the repeate
 - [4 Pack Whip Antenna – 17cm 915MHz](https://muzi.works/products/4-pack-whip-antenna-17cm-915mhz)
 
 ### Power
-- [Wisblock Power - USB-C Power Supply 5V](https://amzn.to/48Ds1Xg)*
-- [Wisblock 1w Booster Power](https://amzn.to/4vDnhuw)*
+- [Wisblock Power - USB-C Power Supply 5V](https://amzn.to/4wIZZn4)*
+- [Wisblock 1w Booster Power](https://amzn.to/4fcAljh)*
 - [Battery 10,000mah](https://www.makerfocus.com/products/makerfocus-3-7v-lipo-battery-10000mah-lithium-rechargeable-battery-9065115-with-micro-ph2-0-plug-for-raspberry-pi-ups-board?srsltid=AfmBOoqfjqSVkog2x_Qjh4hrdZHhAqZc5Q79F1wW9dxHrCMnviXdsmLo) - I bought this on Amazon, but not offered anymore.
 
 ### All inclusive
 - [PeakMesh Altitude Node (Tree)](
 https://www.etsy.com/listing/4331277320/peakmesh-altitude-tree-hanging-solar?ls=a&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=meshcore+solar&ref=sc_gallery-1-1&sr_prefetch=0&pf_from=market&frs=1&sts=1&plkey=Eu-SGt3Zlr4kIGUarPVNyP1qQE0b%3ALT91c79d395e4c86eb309a5f6d841292e2c0ffc42a&variation0=5555035768) - You can request in your checkout to have Meshcore Flashed on the device, otherwise you can do it yourself.
 
+### Companion
+- [Wio Tracker L1 Pro](https://amzn.to/4fcAljh) - If you haven't purchased a companion yet to communicate with other Meshcore users, I strongly recommend this be your first.  If you are more confident in taking the hardware apart, I would suggest intstalling the Muzi wip antenna on it.  (Note: it requires some additional hardware cabling)
 ---
 
 ## Advanced CLI commands I used to manage my Rak Wisblock repeaters. 
