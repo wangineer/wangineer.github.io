@@ -7,7 +7,7 @@ tags: [Cisco, Catalyst 9300X, StackWise, StackPower, IOS XE, Troubleshooting, CC
 description: "A practical walkthrough for replacing a failed Cisco Catalyst 9300X stack member, with emphasis on prestaging, StackWise speed, and the safe order for disconnecting and reconnecting power, StackPower, and StackWise cables."
 permalink: /posts/replace-cisco-catalyst-9300x-stack-member/
 image:
-  path: /assets/img/posts/cisco-9300x-stack-member-replacement.webp
+  path: /assets/img/headers/cisco-9300x-stack-member-replacement.webp
   alt: "Cisco Catalyst 9300X switch being added to a StackWise stack"
 seo:
   title: "Replace a Cisco Catalyst 9300X Stack Member Safely"
